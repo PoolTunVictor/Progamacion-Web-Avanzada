@@ -1,0 +1,26 @@
+<header class="site-header">
+  <div class="header-container">
+    <a routerLink="/" class="logo">
+      <img src="assets/img/logo-cars.png" alt="Inmuebles Cars" />
+    </a>
+
+    <nav class="main-nav">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
+      <a routerLink="/directorio" routerLinkActive="active">Directorio</a>
+      <a routerLink="/mapa" routerLinkActive="active">Mapa</a>
+      <a routerLink="/eventos" routerLinkActive="active">Eventos</a>
+      <a routerLink="/contacto" routerLinkActive="active">Contacto</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="search-box">
+        <span class="search-icon">⌕</span>
+        <input type="text" placeholder="Search" />
+      </div>
+
+      <button class="user-btn" aria-label="Perfil">
+        <span>◉</span>
+      </button>
+    </div>
+  </div>
+</header>

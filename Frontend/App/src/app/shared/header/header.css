@@ -1,0 +1,153 @@
+:host {
+  display: block;
+}
+
+.site-header {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 14px 32px;
+  display: grid;
+  grid-template-columns: 180px 1fr 260px;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo img {
+  max-height: 42px;
+  width: auto;
+  object-fit: contain;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 34px;
+}
+
+.main-nav a {
+  position: relative;
+  text-decoration: none;
+  color: #3b3b3b;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  transition: color 0.25s ease;
+  padding: 8px 0;
+}
+
+.main-nav a:hover {
+  color: #c79b2c;
+}
+
+.main-nav a.active {
+  color: #2f2f2f;
+}
+
+.main-nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #d7b13a, #e9c95e);
+}
+
+.header-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 14px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f7f4ef;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  padding: 8px 12px;
+  min-width: 170px;
+}
+
+.search-icon {
+  font-size: 1rem;
+  color: #7d7d7d;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.user-btn {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(180deg, #e7c65d, #c99725);
+  color: #fff;
+  font-size: 1rem;
+  box-shadow: 0 6px 14px rgba(199, 155, 44, 0.22);
+}
+
+.user-btn:hover {
+  filter: brightness(1.03);
+}
+
+@media (max-width: 1024px) {
+  .header-container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    gap: 18px 24px;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-container {
+    padding: 14px 16px;
+  }
+
+  .main-nav {
+    gap: 14px;
+  }
+
+  .main-nav a {
+    font-size: 0.95rem;
+  }
+
+  .search-box {
+    min-width: 140px;
+  }
+}
