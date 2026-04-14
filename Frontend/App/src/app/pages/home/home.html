@@ -1,0 +1,58 @@
+<section class="home-page">
+  <section class="hero-carousel">
+    <div
+      class="hero-slide"
+      [style.background-image]="'linear-gradient(rgba(0,0,0,.20), rgba(0,0,0,.15)), url(' + slides[currentSlide].image + ')'"
+    >
+      <div class="hero-content">
+        <p class="hero-kicker">Plaza Altabrisa Mérida</p>
+        <h1>{{ slides[currentSlide].title }}</h1>
+        <p class="hero-text">{{ slides[currentSlide].subtitle }}</p>
+      </div>
+
+      <div class="hero-dots">
+        <button
+          *ngFor="let slide of slides; let i = index"
+          class="dot"
+          [class.active]="currentSlide === i"
+          (click)="goToSlide(i)"
+          type="button"
+          [attr.aria-label]="'Ir al slide ' + (i + 1)"
+        ></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="promotions">
+    <div class="section-header">
+      <h2>Últimas promociones</h2>
+      <a routerLink="/eventos" class="see-more">Ver más</a>
+    </div>
+
+    <div class="promo-grid">
+      <article class="promo-card">
+        <img src="assets/img/promo-1.jpg" alt="Promoción 1" />
+        <div class="promo-info">
+          <h3>Promociones en restaurantes</h3>
+          <p>Descubre descuentos especiales y experiencias para compartir.</p>
+        </div>
+      </article>
+
+      <article class="promo-card">
+        <img src="assets/img/promo-2.jpg" alt="Promoción 2" />
+        <div class="promo-info">
+          <h3>Ofertas en tiendas</h3>
+          <p>Las mejores marcas con beneficios exclusivos esta temporada.</p>
+        </div>
+      </article>
+
+      <article class="promo-card">
+        <img src="assets/img/promo-3.jpg" alt="Promoción 3" />
+        <div class="promo-info">
+          <h3>Descuentos especiales</h3>
+          <p>Encuentra promociones únicas para toda la familia.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</section>
