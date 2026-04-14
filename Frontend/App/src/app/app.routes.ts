@@ -2,6 +2,9 @@ import { Routes } from '@angular/router';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout';
 import { HomeComponent } from './pages/home/home';
 import { Eventos } from './pages/eventos/eventos';
+import { Map } from './pages/map/map';
+import { Directory } from './pages/directory/directory';
+import path from 'path';
 
 export const routes: Routes = [
   {
@@ -16,7 +19,15 @@ export const routes: Routes = [
         path: 'eventos',
         component: Eventos
 
-      }
+      },
+      {
+        path: 'mapa',
+        component: Map
+      },
+      {
+        path: 'directorio',
+        component: Directory
+      } 
     ]
   }
 ];
