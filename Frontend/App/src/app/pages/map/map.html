@@ -1,0 +1,85 @@
+<section class="map-page">
+  <div class="map-overlay">
+    <div class="map-container">
+      <h1 class="page-title">Mapa</h1>
+
+      <div class="top-controls">
+        <div class="filter-box">
+          <span class="filter-label">Filtrar por:</span>
+          <select [(ngModel)]="selectedCategory">
+            <option *ngFor="let category of categories" [value]="category">
+              {{ category }}
+            </option>
+          </select>
+        </div>
+
+        <div class="search-box">
+          <span class="search-icon">⌕</span>
+          <input
+            type="text"
+            [(ngModel)]="searchTerm"
+            placeholder="Buscar una tienda..."
+          />
+        </div>
+      </div>
+
+      <div class="floor-switch">
+        <button
+          [class.active]="selectedFloor === 'baja'"
+          (click)="changeFloor('baja')"
+        >
+          Planta Baja
+        </button>
+
+        <button
+          [class.active]="selectedFloor === 'alta'"
+          (click)="changeFloor('alta')"
+        >
+          Planta Alta
+        </button>
+      </div>
+
+      <div class="map-layout">
+        <aside class="sidebar">
+          <div class="sidebar-header">
+            <span class="sidebar-icon">⌕</span>
+            <span>Todos</span>
+          </div>
+
+          <ul class="store-list">
+            <li
+              *ngFor="let store of filteredStores"
+              [class.active]="selectedStoreId === store.id"
+              (click)="selectStore(store.id)"
+            >
+              <span class="store-number">{{ store.id }}.</span>
+              <span class="store-name">{{ store.name }}</span>
+            </li>
+          </ul>
+        </aside>
+
+        <div class="map-board">
+          <div class="map-image-wrapper">
+            <img
+              [src]="currentMapImage"
+              alt="Mapa de la plaza"
+              class="map-image"
+            />
+
+            <button
+              *ngFor="let store of filteredStores"
+              class="map-pin"
+              [class.selected]="isSelected(store)"
+              [style.left.%]="store.x"
+              [style.top.%]="store.y"
+              (click)="selectStore(store.id)"
+              [title]="store.id + '. ' + store.name"
+            >
+              {{ store.id }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
