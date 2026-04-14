@@ -1,0 +1,84 @@
+<section class="directory-page">
+  <div class="directory-overlay">
+    <div class="directory-container">
+      <h1 class="page-title">Directorio</h1>
+
+      <div class="top-filters">
+        <div class="select-box">
+          <span class="select-label">Mostrar:</span>
+          <span class="select-value">{{ selectedCategory }}</span>
+          <span class="select-arrow">⌄</span>
+        </div>
+
+        <div class="search-box">
+          <span class="search-icon">⌕</span>
+          <input
+            type="text"
+            [(ngModel)]="searchTerm"
+            placeholder="Buscar una tienda..."
+          />
+          <span class="search-icon right">⌕</span>
+        </div>
+      </div>
+
+      <div class="category-chips">
+        <button
+          class="chip"
+          *ngFor="let category of categories | slice:0:6"
+          [class.active]="selectedCategory === category.name"
+          (click)="selectCategory(category.name)"
+        >
+          <span class="chip-icon">{{ category.icon }}</span>
+          <span>{{ category.name }}</span>
+        </button>
+      </div>
+
+      <div class="content-layout">
+        <aside class="sidebar">
+          <div class="sidebar-header">
+            <span class="sidebar-icon">⌕</span>
+            <span>Todos</span>
+          </div>
+
+          <ul class="category-list">
+            <li
+              *ngFor="let category of categories.slice(1)"
+              [class.selected]="selectedCategory === category.name"
+              (click)="selectCategory(category.name)"
+            >
+              <span class="list-icon">{{ category.icon }}</span>
+              <span>{{ category.name }}</span>
+            </li>
+          </ul>
+        </aside>
+
+        <section class="stores-section">
+          <div class="stores-grid">
+            <div class="store-card" *ngFor="let store of filteredStores">
+              <div class="store-logo" [ngClass]="store.logoClass">
+                {{ store.logoText }}
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom-info">
+            <div class="contact-info">
+              <p>Calle 7 452 Por 20 y 22, Frac., Altabrisa, C.P. 97130 Mérida, Yuc., México.</p>
+              <p>Tel. (019) 9916 79719 &nbsp;|&nbsp; y yam@incarso.com ✉</p>
+
+              <div class="social-icons">
+                <span>◉</span>
+                <span>◎</span>
+                <span>◌</span>
+              </div>
+            </div>
+
+            <div class="contact-button-wrapper">
+              <button class="contact-button">CONTÁCTANOS</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
