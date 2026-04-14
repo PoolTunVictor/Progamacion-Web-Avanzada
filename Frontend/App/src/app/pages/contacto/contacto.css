@@ -1,0 +1,121 @@
+/* Fondo Blanco Total */
+.background-white {
+  min-height: 90vh;
+  background-color: #ffffff; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Tarjeta: Ajustada para resaltar sobre blanco */
+.contact-card {
+  background: #fdfdfd; /* Un blanco casi imperceptiblemente gris para contraste */
+  border-radius: 12px;
+  width: 100%;
+  max-width: 950px;
+  padding: 40px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08); /* Sombra suave para que "flote" */
+  border: 1px solid #eeeeee;
+}
+
+.header-contacto {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.icon-circle {
+  background: linear-gradient(135deg, #e5c060, #b8860b);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(184, 134, 11, 0.3);
+}
+
+.header-contacto h1 {
+  color: #353535; /* Tu gris oscuro de la paleta */
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr; /* Formulario un poco más ancho */
+  gap: 30px;
+}
+
+/* Inputs Dorados Estilo Altabrisa */
+.gold-select, .input-group {
+  width: 100%;
+  background-color: #e5c060; 
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.gold-select {
+  border: none;
+  padding: 12px;
+  color: #333;
+  cursor: pointer;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.input-group input, .input-group textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 12px;
+  color: #333;
+  outline: none;
+}
+
+.input-group input::placeholder, .input-group textarea::placeholder {
+  color: rgba(0,0,0,0.5);
+}
+
+/* Botón Enviar */
+.btn-enviar-gold {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(to bottom, #f0d58e, #d4af37);
+  border: 1px solid #b8860b;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: transform 0.2s;
+}
+
+.btn-enviar-gold:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+/* Contenedor del Mapa */
+.map-side {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  min-height: 350px;
+}
+
+/* Responsivo */
+@media (max-width: 850px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
