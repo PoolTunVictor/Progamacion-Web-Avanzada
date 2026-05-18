@@ -31,24 +31,51 @@ export class Map {
     'Bancos',
     'Belleza',
     'Alimentos',
-    'Entretenimiento'
+    'Entretenimiento',
+    'Tecnología'
   ];
 
-  stores: StoreLocation[] = [
-    // PLANTA ALTA
-    { id: 109, name: 'Food Court', category: 'Alimentos', floor: 'alta', x: 33.5, y: 37 },
-    { id: 180, name: 'Local 180', category: 'Moda', floor: 'alta', x: 47.5, y: 38.5 },
-    { id: 121, name: 'Local 121', category: 'Accesorios', floor: 'alta', x: 56.5, y: 30 },
-    { id: 140, name: 'Local 140', category: 'Bancos', floor: 'alta', x: 77, y: 63.5 },
+stores: StoreLocation[] = [
+  // PLANTA ALTA
+  { id: 109, name: 'Food Court', category: 'Alimentos', floor: 'alta', x: 35.8, y: 33.5 },
+  { id: 180, name: 'Game Planet', category: 'Entretenimiento', floor: 'alta', x: 47.8, y: 35.5 },
+  { id: 121, name: 'Pandora', category: 'Accesorios', floor: 'alta', x: 53.7, y: 35.5 },
+  { id: 140, name: 'BBVA', category: 'Bancos', floor: 'alta', x: 73.5, y: 69.5 },
+  { id: 141, name: 'Zara', category: 'Moda', floor: 'alta', x: 74.2, y: 66.5 },
+  { id: 142, name: 'Nike', category: 'Moda', floor: 'alta', x: 77.8, y: 63.5 },
+  { id: 143, name: 'American Eagle', category: 'Moda', floor: 'alta', x: 81.5, y: 60.5 },
+  { id: 144, name: 'Starbucks', category: 'Alimentos', floor: 'alta', x: 65.5, y: 63.5 },
+  { id: 145, name: 'Yelori', category: 'Alimentos', floor: 'alta', x: 64.5, y: 61 },
+  { id: 146, name: 'Liverpool', category: 'Moda', floor: 'alta', x: 69.5, y: 74.5 },
+  { id: 147, name: 'Miniso', category: 'Accesorios', floor: 'alta', x: 67.5, y: 71 },
+  { id: 148, name: 'Telcel', category: 'Tecnología', floor: 'alta', x: 31.5, y: 36.5 },
+  { id: 149, name: 'Suburbia', category: 'Moda', floor: 'alta', x: 72, y: 77.5 },
+  { id: 150, name: 'MacStore', category: 'Tecnología', floor: 'alta', x: 58.2, y: 25.5 },
+  { id: 151, name: 'Office Depot', category: 'Tecnología', floor: 'alta', x: 40.5, y: 21.5 },
+  { id: 152, name: 'Bershka', category: 'Moda', floor: 'alta', x: 75.5, y: 83 },
+  { id: 153, name: 'H&M', category: 'Moda', floor: 'alta', x: 78.5, y: 80.5 },
+  { id: 154, name: 'Pull & Bear', category: 'Moda', floor: 'alta', x: 81, y: 78 },
+  { id: 155, name: 'Stradivarius', category: 'Moda', floor: 'alta', x: 83, y: 75.5 },
+  { id: 156, name: 'Cinépolis', category: 'Entretenimiento', floor: 'alta', x: 71.5, y: 86 },
 
-    // PLANTA BAJA
-    { id: 1, name: 'SEARS', category: 'Moda', floor: 'baja', x: 10.5, y: 26 },
-    { id: 33, name: 'Local 33', category: 'Moda', floor: 'baja', x: 73, y: 47 },
-    { id: 42, name: 'Local 42', category: 'Alimentos', floor: 'baja', x: 81, y: 80 },
-    { id: 47, name: 'Local 47', category: 'Accesorios', floor: 'baja', x: 68.5, y: 67.5 },
-    { id: 87, name: 'Local 87', category: 'Entretenimiento', floor: 'baja', x: 36.5, y: 38.5 },
-    { id: 97, name: 'Local 97', category: 'Belleza', floor: 'baja', x: 25.5, y: 69 }
-  ];
+  // PLANTA BAJA
+  { id: 1, name: 'SEARS', category: 'Moda', floor: 'baja', x: 12.5, y: 25.5 },
+  { id: 33, name: 'Sanborns', category: 'Alimentos', floor: 'baja', x: 74.5, y: 44.5 },
+  { id: 42, name: 'Liverpool', category: 'Moda', floor: 'baja', x: 82.5, y: 82 },
+  { id: 47, name: 'Zara', category: 'Moda', floor: 'baja', x: 69.5, y: 70 },
+  { id: 87, name: 'Altaria Bowling', category: 'Entretenimiento', floor: 'baja', x: 38.5, y: 42 },
+  { id: 97, name: 'Caseta 1', category: 'Belleza', floor: 'baja', x: 25.5, y: 75 },
+  { id: 98, name: 'Dolorfín', category: 'Belleza', floor: 'baja', x: 7.5, y: 11 },
+  { id: 99, name: 'GNC', category: 'Belleza', floor: 'baja', x: 10.8, y: 11 },
+  { id: 100, name: 'Coco Tea', category: 'Alimentos', floor: 'baja', x: 14, y: 11 },
+  { id: 101, name: 'Krispy Kreme', category: 'Alimentos', floor: 'baja', x: 52, y: 8 },
+  { id: 102, name: 'Sally Beauty', category: 'Belleza', floor: 'baja', x: 62.5, y: 73 },
+  { id: 103, name: 'Telcel', category: 'Tecnología', floor: 'baja', x: 67.5, y: 63 },
+  { id: 104, name: 'AT&T', category: 'Tecnología', floor: 'baja', x: 69.8, y: 53.5 },
+  { id: 105, name: 'Subway', category: 'Alimentos', floor: 'baja', x: 75, y: 69 },
+  { id: 106, name: 'Santander', category: 'Bancos', floor: 'baja', x: 76, y: 39.5 },
+  { id: 107, name: 'Cuidado con el Perro', category: 'Moda', floor: 'baja', x: 56, y: 47 }
+];
 
   get filteredStores(): StoreLocation[] {
     return this.stores.filter((store) => {
@@ -68,16 +95,12 @@ export class Map {
 
   get currentMapImage(): string {
     return this.selectedFloor === 'alta'
-      ? '/planta_alta.png'
-      : '/planta_baja.png';
+      ? 'assets/planta_alta.png'
+      : 'assets/planta_baja.png';
   }
 
   selectStore(storeId: number): void {
     this.selectedStoreId = storeId;
-  }
-
-  selectCategory(category: string): void {
-    this.selectedCategory = category;
   }
 
   changeFloor(floor: 'alta' | 'baja'): void {

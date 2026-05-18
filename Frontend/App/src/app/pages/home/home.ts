@@ -21,17 +21,17 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   slides: Slide[] = [
     {
-      image: 'assets/home/Home.png',
+      image: 'assets/home/Plaza1.png',
       title: 'VOLVAMOS A SER NIÑOS',
       subtitle: 'Vive promociones, eventos y experiencias para toda la familia.'
     },
     {
-      image: 'assets/img/home-slide-2.jpg',
+      image: 'assets/home/Plaza2.png',
       title: 'DISFRUTA CADA MOMENTO',
       subtitle: 'Descubre nuevas tiendas, sabores y promociones en Plaza Altabrisa.'
     },
     {
-      image: 'assets/img/home-slide-3.jpg',
+      image: 'assets/home/Plaza3.png',
       title: 'EVENTOS PARA TODOS',
       subtitle: 'Encuentra actividades especiales durante toda la temporada.'
     }

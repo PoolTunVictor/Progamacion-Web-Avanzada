@@ -6,8 +6,7 @@
   min-height: 100vh;
   padding: 28px 0 40px;
   background:
-    linear-gradient(rgba(248, 242, 238, 0.78), rgba(248, 242, 238, 0.88)),
-    url('/assets/img/mapa-fondo.jpg');
+    linear-gradient(rgba(248, 242, 238, 0.78), rgba(248, 242, 238, 0.88));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -137,6 +136,7 @@
   border-radius: 20px;
   padding: 16px;
   backdrop-filter: blur(2px);
+  align-items: start;
 }
 
 .sidebar {
@@ -144,6 +144,9 @@
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 110px;
+  height: fit-content;
 }
 
 .sidebar-header {
@@ -165,8 +168,25 @@
   list-style: none;
   margin: 0;
   padding: 12px 0;
-  max-height: 760px;
+  height: calc(100vh - 280px);
   overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #c99a31 rgba(255,255,255,0.18);
+}
+
+.store-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.store-list::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.2);
+  border-radius: 999px;
+}
+
+.store-list::-webkit-scrollbar-thumb {
+  background: #c99a31;
+  border-radius: 999px;
 }
 
 .store-list li {
@@ -197,22 +217,21 @@
   background: rgba(255,255,255,0.45);
   border-radius: 18px;
   padding: 18px;
-  min-height: 760px;
+  height: calc(100vh - 180px);
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: auto;
 }
 
 .map-image-wrapper {
   position: relative;
   width: min(1050px, 100%);
-  aspect-ratio: 4 / 3;
 }
 
 .map-image {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
   display: block;
   border-radius: 8px;
 }
@@ -246,15 +265,21 @@
     grid-template-columns: 1fr;
   }
 
+  .sidebar {
+    position: static;
+  }
+
   .page-title {
     font-size: 3rem;
   }
 
   .map-board {
+    height: auto;
     min-height: 500px;
   }
 
   .store-list {
+    height: auto;
     max-height: 280px;
   }
 }

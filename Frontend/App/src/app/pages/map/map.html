@@ -25,6 +25,7 @@
 
       <div class="floor-switch">
         <button
+          type="button"
           [class.active]="selectedFloor === 'baja'"
           (click)="changeFloor('baja')"
         >
@@ -32,6 +33,7 @@
         </button>
 
         <button
+          type="button"
           [class.active]="selectedFloor === 'alta'"
           (click)="changeFloor('alta')"
         >
@@ -43,7 +45,7 @@
         <aside class="sidebar">
           <div class="sidebar-header">
             <span class="sidebar-icon">⌕</span>
-            <span>Todos</span>
+            <span>{{ selectedFloor === 'alta' ? 'Planta Alta' : 'Planta Baja' }}</span>
           </div>
 
           <ul class="store-list">
@@ -68,6 +70,7 @@
 
             <button
               *ngFor="let store of filteredStores"
+              type="button"
               class="map-pin"
               [class.selected]="isSelected(store)"
               [style.left.%]="store.x"
