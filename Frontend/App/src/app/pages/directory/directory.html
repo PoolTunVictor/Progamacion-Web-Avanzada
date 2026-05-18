@@ -4,37 +4,27 @@
       <h1 class="page-title">Directorio</h1>
 
       <div class="top-filters">
-
-
         <div class="search-box">
-          <span class="search-icon">⌕</span>
           <input
             type="text"
             [(ngModel)]="searchTerm"
             placeholder="Buscar una tienda..."
           />
-          <span class="search-icon right">⌕</span>
         </div>
-      </div>
-
-      <div class="category-chips">
-
       </div>
 
       <div class="content-layout">
         <aside class="sidebar">
           <div class="sidebar-header">
-            <span class="sidebar-icon">⌕</span>
-            <span>Todos</span>
+            <span>{{ selectedCategory }}</span>
           </div>
 
           <ul class="category-list">
             <li
-              *ngFor="let category of categories.slice(1)"
+              *ngFor="let category of categories"
               [class.selected]="selectedCategory === category.name"
               (click)="selectCategory(category.name)"
             >
-              <span class="list-icon">{{ category.icon }}</span>
               <span>{{ category.name }}</span>
             </li>
           </ul>
@@ -42,7 +32,11 @@
 
         <section class="stores-section">
           <div class="stores-grid">
-            <div class="store-card" *ngFor="let store of filteredStores">
+            <div
+              class="store-card"
+              *ngFor="let store of filteredStores"
+              (click)="openStoreModal(store)"
+            >
               <div class="store-logo" [ngClass]="store.logoClass">
                 {{ store.logoText }}
               </div>
@@ -50,12 +44,33 @@
           </div>
 
           <div class="bottom-info">
-
             <div class="contact-button-wrapper">
               <button class="contact-button">CONTÁCTANOS</button>
             </div>
           </div>
         </section>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="modal-backdrop"
+    *ngIf="selectedStore"
+    (click)="closeStoreModal()"
+  >
+    <div class="store-modal" (click)="$event.stopPropagation()">
+      <button class="modal-close" type="button" (click)="closeStoreModal()">
+        ✕
+      </button>
+
+      <div class="modal-image">
+        <img [src]="selectedStore.image" [alt]="selectedStore.name" />
+      </div>
+
+      <div class="modal-content">
+        <h2>{{ selectedStore.name }}</h2>
+        <p class="modal-category">{{ selectedStore.category }}</p>
+        <p>{{ selectedStore.description }}</p>
       </div>
     </div>
   </div>
