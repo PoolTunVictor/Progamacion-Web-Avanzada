@@ -63,14 +63,16 @@
         ✕
       </button>
 
-      <div class="modal-image">
-        <img [src]="selectedStore.image" [alt]="selectedStore.name" />
-      </div>
-
       <div class="modal-content">
-        <h2>{{ selectedStore.name }}</h2>
-        <p class="modal-category">{{ selectedStore.category }}</p>
-        <p>{{ selectedStore.description }}</p>
+        <div class="modal-info">
+          <h2>{{ selectedStore.name }}</h2>
+          <p class="modal-category">{{ selectedStore.category }}</p>
+          <p>{{ selectedStore.description }}</p>
+        </div>
+
+        <div class="modal-image">
+          <img [src]="selectedStore.image" [alt]="selectedStore.name" />
+        </div>
       </div>
     </div>
   </div>

@@ -58,7 +58,7 @@ export class Directory {
       category: 'Accesorios',
       logoText: 'BEN & FRANK',
       logoClass: 'logo-black',
-      image: 'assets/img/stores/benfrank.jpg',
+      image: 'assets/directory/BEN-AND-FRANK.jpg',
       description: 'Accesorios modernos para complementar tu estilo con personalidad y comodidad.',
     },
     {
@@ -66,7 +66,7 @@ export class Directory {
       category: 'Accesorios',
       logoText: 'MINISO',
       logoClass: 'logo-red',
-      image: 'assets/img/stores/miniso.jpg',
+      image: 'assets/directory/miniso.png',
       description: 'Artículos prácticos, bonitos y accesibles para tu día a día.',
     },
     {
@@ -74,7 +74,7 @@ export class Directory {
       category: 'Accesorios',
       logoText: 'PANDORA',
       logoClass: 'logo-outline',
-      image: 'assets/img/stores/pandora.jpg',
+      image: 'assets/directory/Pandora.jpg',
       description: 'Accesorios y piezas especiales para expresar tu estilo con elegancia.',
     },
 
@@ -84,7 +84,7 @@ export class Directory {
       category: 'Alimentos',
       logoText: 'STARBUCKS',
       logoClass: 'logo-green',
-      image: 'assets/img/stores/starbucks.jpg',
+      image: 'assets/directory/starbucks.png',
       description: 'Café, bebidas y alimentos para disfrutar una pausa durante tu visita.',
     },
     {
@@ -92,7 +92,7 @@ export class Directory {
       category: 'Alimentos',
       logoText: 'COFFEE',
       logoClass: 'logo-brown',
-      image: 'assets/img/stores/italian-coffee.jpg',
+      image: 'assets/directory/italianCoffe.png',
       description: 'Café y alimentos para acompañar tus compras con un momento de descanso.',
     },
     {
@@ -100,7 +100,7 @@ export class Directory {
       category: 'Alimentos',
       logoText: 'COCO TEA',
       logoClass: 'logo-gold',
-      image: 'assets/img/stores/coco-tea.jpg',
+      image: 'assets/directory/cocotea.png',
       description: 'Bebidas frescas y sabores especiales para disfrutar algo diferente.',
     },
 
@@ -110,7 +110,7 @@ export class Directory {
       category: 'Bancos',
       logoText: 'BBVA',
       logoClass: 'logo-blue',
-      image: 'assets/img/stores/bbva.jpg',
+      image: 'assets/directory/bbva.jpg',
       description: 'Servicios bancarios para pagos, trámites, cuentas y atención financiera.',
     },
     {
@@ -118,7 +118,7 @@ export class Directory {
       category: 'Bancos',
       logoText: 'Banamex',
       logoClass: 'logo-blue',
-      image: 'assets/img/stores/banamex.jpg',
+      image: 'assets/directory/banamex.jpg',
       description: 'Soluciones financieras para realizar tus operaciones de forma práctica.',
     },
     {
@@ -126,7 +126,7 @@ export class Directory {
       category: 'Bancos',
       logoText: 'INBURSA',
       logoClass: 'logo-navy',
-      image: 'assets/img/stores/inbursa.jpg',
+      image: 'assets/directory/inbursa.png',
       description: 'Servicios financieros para clientes personales y empresariales.',
     },
 
@@ -136,7 +136,7 @@ export class Directory {
       category: 'Belleza',
       logoText: 'BELLÍSIMA',
       logoClass: 'logo-gray',
-      image: 'assets/img/stores/bellisima.jpg',
+      image: 'assets/directory/belli.jpg',
       description: 'Productos de maquillaje y belleza para expresar tu estilo todos los días.',
     },
     {
@@ -144,7 +144,7 @@ export class Directory {
       category: 'Belleza',
       logoText: 'Bissú',
       logoClass: 'logo-black',
-      image: 'assets/img/stores/bissu.jpg',
+      image: 'assets/directory/bissu.jpg',
       description: 'Maquillaje lleno de color para crear looks únicos, prácticos y modernos.',
     },
     {
@@ -152,7 +152,7 @@ export class Directory {
       category: 'Belleza',
       logoText: 'SALLY',
       logoClass: 'logo-red',
-      image: 'assets/img/stores/sally.jpg',
+      image: 'assets/directory/sally.jpg',
       description: 'Productos profesionales para el cuidado del cabello, piel y belleza personal.',
     },
 
@@ -162,7 +162,7 @@ export class Directory {
       category: 'Moda Dama',
       logoText: '98',
       logoClass: 'logo-orange',
-      image: 'assets/img/stores/98coast.jpg',
+      image: 'assets/directory/98.png',
       description: 'Moda de playa fresca, colorida y cómoda para disfrutar cada momento bajo el sol.',
     },
     {
@@ -170,7 +170,7 @@ export class Directory {
       category: 'Moda Dama',
       logoText: 'ANN CHERY',
       logoClass: 'logo-gold',
-      image: 'assets/img/stores/annchery.jpg',
+      image: 'assets/directory/ann.jpg',
       description: 'Prendas diseñadas para resaltar tu figura con comodidad, seguridad y estilo.',
     },
     {
@@ -178,7 +178,7 @@ export class Directory {
       category: 'Moda Dama',
       logoText: 'SFERA',
       logoClass: 'logo-black',
-      image: 'assets/img/stores/sfera.jpg',
+      image: 'assets/directory/sfera.png',
       description: 'Moda actual para crear outfits elegantes, cómodos y versátiles.',
     },
 
