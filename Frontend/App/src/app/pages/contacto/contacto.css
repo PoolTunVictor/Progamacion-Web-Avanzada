@@ -1,102 +1,150 @@
-/* Fondo Blanco Total */
-.background-white {
+.background-container {
   min-height: 90vh;
-  background-color: #ffffff; 
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px;
+  padding: 55px 24px;
 }
 
 /* Tarjeta: Ajustada para resaltar sobre blanco */
 .contact-card {
-  background: #fdfdfd; /* Un blanco casi imperceptiblemente gris para contraste */
-  border-radius: 12px;
+  background: #fdfdfd;
+  border-radius: 22px;
   width: 100%;
-  max-width: 950px;
-  padding: 40px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.08); /* Sombra suave para que "flote" */
+  max-width: 1120px;
+  padding: 42px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
   border: 1px solid #eeeeee;
 }
 
 .header-contacto {
   display: flex;
   align-items: center;
-  gap: 15px;
-  margin-bottom: 35px;
+  justify-content: center;
+  gap: 22px;
+  margin-bottom: 42px;
+  text-align: left;
 }
 
-.icon-circle {
-  background: linear-gradient(135deg, #e5c060, #b8860b);
-  width: 45px;
-  height: 45px;
+.contacto-logo-box {
+  width: 86px;
+  height: 86px;
   border-radius: 50%;
+  background: linear-gradient(135deg, #f0d58e, #d4af37);
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 10px rgba(184, 134, 11, 0.3);
+  box-shadow: 0 8px 18px rgba(184, 134, 11, 0.22);
+  flex-shrink: 0;
+}
+
+.contacto-logo-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
 }
 
 .header-contacto h1 {
-  color: #353535; /* Tu gris oscuro de la paleta */
+  color: #353535;
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   margin: 0;
+}
+
+.header-contacto p {
+  margin: 8px 0 0;
+  color: #6b6663;
+  font-size: 1rem;
 }
 
 .content-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr; /* Formulario un poco más ancho */
-  gap: 30px;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 36px;
+  align-items: stretch;
+}
+
+.form-side {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 26px;
+  border-radius: 18px;
+  border: 1px solid #eeeeee;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
 }
 
 /* Inputs Dorados Estilo Altabrisa */
-.gold-select, .input-group {
+.gold-select,
+.input-group {
   width: 100%;
-  background-color: #e5c060; 
-  border-radius: 4px;
-  margin-bottom: 12px;
+  background-color: #e5c060;
+  border-radius: 8px;
+  margin-bottom: 14px;
 }
 
 .gold-select {
   border: none;
-  padding: 12px;
+  padding: 14px;
   color: #333;
   cursor: pointer;
+  outline: none;
 }
 
 .input-group {
   display: flex;
   align-items: center;
-  padding-left: 10px;
+  padding-left: 12px;
 }
 
-.input-group input, .input-group textarea {
+.icon {
+  width: 24px;
+  display: inline-flex;
+  justify-content: center;
+  color: #333;
+}
+
+.input-group input,
+.input-group textarea {
   width: 100%;
   background: transparent;
   border: none;
-  padding: 12px;
+  padding: 14px;
   color: #333;
   outline: none;
+  font-size: 0.95rem;
 }
 
-.input-group input::placeholder, .input-group textarea::placeholder {
+.input-group input::placeholder,
+.input-group textarea::placeholder {
   color: rgba(0,0,0,0.5);
+}
+
+.textarea-group {
+  align-items: flex-start;
+}
+
+.textarea-group .icon {
+  padding-top: 14px;
+}
+
+.textarea-group textarea {
+  min-height: 112px;
+  resize: vertical;
 }
 
 /* Botón Enviar */
 .btn-enviar-gold {
   width: 100%;
-  padding: 14px;
+  padding: 15px;
   background: linear-gradient(to bottom, #f0d58e, #d4af37);
   border: 1px solid #b8860b;
-  border-radius: 4px;
+  border-radius: 999px;
   font-weight: bold;
   color: #333;
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
-  margin-top: 15px;
+  margin-top: 12px;
   transition: transform 0.2s;
 }
 
@@ -107,15 +155,79 @@
 
 /* Contenedor del Mapa */
 .map-side {
-  border-radius: 8px;
+  position: relative;
+  border-radius: 18px;
   overflow: hidden;
   border: 1px solid #ddd;
-  min-height: 350px;
+  min-height: 420px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.map-side iframe {
+  display: block;
+}
+
+.map-info {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  right: 18px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 14px;
+  padding: 14px 18px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.map-info h2 {
+  margin: 0 0 5px;
+  font-size: 1.1rem;
+  color: #353535;
+}
+
+.map-info p {
+  margin: 0;
+  color: #6b6663;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 /* Responsivo */
 @media (max-width: 850px) {
   .content-grid {
     grid-template-columns: 1fr;
+  }
+
+  .header-contacto {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .map-side {
+    min-height: 340px;
+  }
+}
+
+@media (max-width: 520px) {
+  .background-container {
+    padding: 34px 16px;
+  }
+
+  .contact-card {
+    padding: 24px;
+  }
+
+  .header-contacto h1 {
+    font-size: 2rem;
+  }
+
+  .contacto-logo-box {
+    width: 74px;
+    height: 74px;
+  }
+
+  .contacto-logo-img {
+    width: 40px;
+    height: 40px;
   }
 }
