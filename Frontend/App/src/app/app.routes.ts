@@ -5,7 +5,6 @@ import { Eventos } from './pages/eventos/eventos';
 import { Map } from './pages/map/map';
 import { Directory } from './pages/directory/directory';
 import { ContactoComponent } from './pages/contacto/contacto';
-import path from 'path';
 
 export const routes: Routes = [
   {

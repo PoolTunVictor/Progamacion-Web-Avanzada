@@ -1,12 +1,13 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 declare var FB: any;
 
 @Component({
   selector: 'app-eventos',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './eventos.html',
   styleUrls: ['./eventos.css']
 })
