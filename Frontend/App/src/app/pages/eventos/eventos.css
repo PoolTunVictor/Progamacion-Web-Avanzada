@@ -1,114 +1,184 @@
 .page-container {
-  padding: 30px;
+  padding: 46px 40px 60px;
   background: linear-gradient(to bottom, #eeeae4, #ffffff);
   min-height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* TÍTULO */
 .title-section {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 42px;
 }
 
 .title-section h1 {
-  font-size: 4rem;
+  font-size: clamp(3rem, 6vw, 5rem);
   font-family: Georgia, 'Times New Roman', serif;
   color: #000000;
+  margin: 0;
 }
 
 .icon {
   background: #f3c97a;
-  padding: 10px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
-/* CONTENIDO */
 .content {
-  display: flex;
-  gap: 20px;
+  width: min(1280px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(520px, 680px) minmax(300px, 420px);
+  gap: 28px;
+  align-items: start;
   justify-content: center;
 }
 
-/* TARJETAS */
-.card {
-  background: rgba(255,255,255,0.9);
-  border-radius: 15px;
-  padding: 15px;
-  width: 420px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.card,
+.events-side-card {
+  background: rgba(255,255,255,0.92);
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.10);
 }
 
-/* IZQUIERDA */
-.card-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
+.social-card {
+  width: 100%;
 }
 
-.post-text {
-  font-size: 14px;
-  margin-bottom: 10px;
+.card-title {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.image-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 120px 120px;
-  gap: 5px;
+.card-title h3 {
+  margin: 0 0 8px;
+  font-size: 1.55rem;
+  color: #252525;
 }
 
-.img {
-  background: #ddd;
-  border-radius: 10px;
+.card-title p {
+  margin: 0;
+  color: #666;
+  font-size: 0.98rem;
+  line-height: 1.5;
 }
 
-.large {
-  grid-row: span 2;
-}
-
-/* ACCIONES */
-.card-actions {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 10px;
-  font-size: 13px;
-  color: #555;
-}
-
-/* FACEBOOK REAL */
 .social-placeholder {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   overflow: hidden;
-  margin-top: 10px;
+  min-height: 720px;
 }
 
 .fb-page {
   width: 100% !important;
 }
 
-/* BOTÓN */
+.events-side-card {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.side-block {
+  background: rgba(248, 244, 238, 0.78);
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.side-block.highlight {
+  background: linear-gradient(135deg, #f2d37b, #d89f2f);
+  color: #222;
+}
+
+.side-label {
+  display: inline-block;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.side-block h2,
+.side-block h3 {
+  margin: 0 0 10px;
+  color: inherit;
+}
+
+.side-block h2 {
+  font-size: 1.7rem;
+  line-height: 1.15;
+}
+
+.side-block h3 {
+  font-size: 1.15rem;
+}
+
+.side-block p {
+  margin: 0;
+  color: inherit;
+  line-height: 1.6;
+}
+
+.side-block ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #4a4a4a;
+  line-height: 1.8;
+}
+
 .contact-btn {
-  margin-top: 15px;
   width: 100%;
-  padding: 12px;
+  padding: 15px;
   border: none;
-  border-radius: 20px;
+  border-radius: 999px;
   background: linear-gradient(to right, #e0a84e, #c98b2c);
   color: white;
   font-weight: bold;
   cursor: pointer;
+  box-shadow: 0 8px 18px rgba(201, 139, 44, 0.24);
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
+.contact-btn:hover {
+  filter: brightness(1.04);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1050px) {
   .content {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
+  }
+
+  .events-side-card {
+    position: static;
+  }
+
+  .social-placeholder {
+    min-height: 620px;
+  }
+}
+
+@media (max-width: 900px) {
+  .page-container {
+    padding: 34px 18px 44px;
+  }
+
+  .title-section h1 {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+
+  .content {
+    width: 100%;
   }
 }

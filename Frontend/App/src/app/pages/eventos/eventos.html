@@ -1,63 +1,64 @@
 <div class="page-container">
+  <div id="fb-root"></div>
 
-  <!-- TÍTULO -->
   <div class="title-section">
     <div class="icon"></div>
     <h1>Eventos y Promociones</h1>
   </div>
 
-  <!-- CONTENIDO -->
   <div class="content">
-
-    <!-- IZQUIERDA -->
-    <div class="card facebook-preview">
-      <div class="card-header">
-        <strong>Plaza Altabrisa Mérida</strong>
-        <span class="time">Hace 5 horas</span>
+    <div class="card social-card">
+      <div class="card-title">
+        <h3>Últimas publicaciones</h3>
+        <p>Consulta las promociones y novedades más recientes de Plaza Altabrisa Mérida.</p>
       </div>
 
-      <p class="post-text">
-        Descubre México desde su esencia 🌴✨<br>
-        Vive el verano con looks frescos en Studio F México.
-      </p>
-
-      <div class="image-grid">
-        <div class="img large"></div>
-        <div class="img small"></div>
-        <div class="img small"></div>
-      </div>
-
-      <div class="card-actions">
-        <span>👍 Like</span>
-        <span>💬 Comment</span>
-        <span>↗ Share</span>
+      <div class="social-placeholder">
+        <div
+          class="fb-page"
+          data-href="https://www.facebook.com/altabrisameridamx"
+          data-tabs="timeline"
+          data-width="650"
+          data-height="720"
+          data-small-header="false"
+          data-adapt-container-width="true"
+          data-hide-cover="false"
+          data-show-facepile="false">
+        </div>
       </div>
     </div>
 
-    <!-- DERECHA (FACEBOOK REAL) -->
-    <div class="card social-card">
-      <h3>Plaza Altabrisa Mérida</h3>
+    <aside class="events-side-card">
+      <div class="side-block highlight">
+        <span class="side-label">Promociones</span>
+        <h2>Entérate de las novedades</h2>
+        <p>
+          Aquí podrás consultar publicaciones recientes, promociones de temporada
+          y actividades especiales de la plaza.
+        </p>
+      </div>
 
-      <div class="social-placeholder">
+      <div class="side-block">
+        <h3>¿Qué puedes encontrar?</h3>
+        <ul>
+          <li>Eventos familiares</li>
+          <li>Promociones de tiendas</li>
+          <li>Nuevas aperturas</li>
+          <li>Actividades especiales</li>
+        </ul>
+      </div>
 
-        <div class="fb-page"
-             data-href="https://www.facebook.com/profile.php?id=61576466523244"
-             data-tabs="timeline"
-             data-width="380"
-             data-height="400"
-             data-small-header="false"
-             data-adapt-container-width="true"
-             data-hide-cover="false"
-             data-show-facepile="true">
-        </div>
-
+      <div class="side-block">
+        <h3>Síguenos en Facebook</h3>
+        <p>
+          Las publicaciones se actualizan directamente desde la página oficial
+          de Plaza Altabrisa Mérida.
+        </p>
       </div>
 
       <button class="contact-btn" routerLink="/contacto">
         CONTÁCTANOS
       </button>
-    </div>
-
+    </aside>
   </div>
-
 </div>

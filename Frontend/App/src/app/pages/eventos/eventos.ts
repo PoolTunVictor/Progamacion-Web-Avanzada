@@ -2,7 +2,12 @@ import { Component, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
-declare var FB: any;
+declare global {
+  interface Window {
+    FB: any;
+    fbAsyncInit: any;
+  }
+}
 
 @Component({
   selector: 'app-eventos',
@@ -14,17 +19,41 @@ declare var FB: any;
 export class Eventos implements AfterViewInit {
 
   ngAfterViewInit(): void {
-    this.renderFacebook();
+    if (typeof window !== 'undefined') {
+      this.loadFacebookSDK();
+    }
   }
 
-  renderFacebook() {
+  loadFacebookSDK(): void {
+    if (document.getElementById('facebook-jssdk')) {
+      this.renderFacebook();
+      return;
+    }
+
+    window.fbAsyncInit = () => {
+      window.FB.init({
+        xfbml: true,
+        version: 'v19.0'
+      });
+
+      this.renderFacebook();
+    };
+
+    const script = document.createElement('script');
+    script.id = 'facebook-jssdk';
+    script.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v19.0';
+    script.async = true;
+    script.defer = true;
+    script.crossOrigin = 'anonymous';
+
+    document.body.appendChild(script);
+  }
+
+  renderFacebook(): void {
     setTimeout(() => {
-      if (typeof FB !== 'undefined') {
-        FB.XFBML.parse();
-      } else {
-        console.warn('Facebook SDK no cargado aún');
+      if (window.FB) {
+        window.FB.XFBML.parse();
       }
-    }, 500);
+    }, 1000);
   }
-
 }

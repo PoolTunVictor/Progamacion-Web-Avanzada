@@ -25,32 +25,16 @@
 
   <section class="promotions">
     <div class="section-header">
-      <h2>Últimas promociones</h2>
+      <h2>Promociones y Anuncios</h2>
       <a routerLink="/eventos" class="see-more">Ver más</a>
     </div>
 
     <div class="promo-grid">
-      <article class="promo-card">
-        <img src="assets/home/promocion1.png" alt="Promoción 1" />
+      <article class="promo-card" *ngFor="let promo of visiblePromotions">
+        <img [src]="promo.image" [alt]="promo.title" />
         <div class="promo-info">
-          <h3>Promociones en restaurantes</h3>
-          <p>Descubre descuentos especiales y experiencias para compartir.</p>
-        </div>
-      </article>
-
-      <article class="promo-card">
-        <img src="assets/home/hym.jpg" alt="Promoción 2" />
-        <div class="promo-info">
-          <h3>Ofertas en tiendas</h3>
-          <p>Las mejores marcas con beneficios exclusivos esta temporada.</p>
-        </div>
-      </article>
-
-      <article class="promo-card">
-        <img src="assets/home/cine2.jpg" alt="Promoción 3" />
-        <div class="promo-info">
-          <h3>Descuentos especiales</h3>
-          <p>Encuentra promociones únicas para toda la familia.</p>
+          <h3>{{ promo.title }}</h3>
+          <p>{{ promo.description }}</p>
         </div>
       </article>
     </div>
